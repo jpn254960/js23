@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(3, 3, 97);
+    }
+    #m{
+        visibility: collapse;
+        width: 0px;
+        height: 0px;
+    }
+    #i,#but{
+        margin-top: 100px;
+        border-radius: 20px;
+    }
+    #meio{
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        top: 50px;
+        margin: auto;
+        text-align: center;
+        width: 300px;
+        height: 480px;
+        border-radius: 30px;
+    }
+
+</style>
+<body>
+    <section id="meio">
+        <input type="text" value="reposta do enigma..." id="i">
+        <input type="button" value="testar" id="but" onclick="clique()">
+        <video controls id="m">
+            <source src="" type="video/mp4">
+        </video>
+    </section>
+</body>
+<script>
+function clique(){
+    var m = document.getElementById('m')
+    var inp=document.getElementById('i').value
+    console.log(inp)
+    if (inp=='120'){
+        m.src='video.mp4'
+        m.style.visibility='visible'
+        m.style.width='180px'
+        m.style.margin='auto'
+        m.style.height='320px'
+        document.getElementById('i').style.visibility='collapse'
+        document.getElementById('but').style.visibility='collapse'
+    }
+}
+</script>
+</html>
